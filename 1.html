@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+// class cha{
+//   static colorChange(newColor){
+//     this.newColor=newColor
+//     return this.newColor
+//   }
+
+//   constructor({newColor='green'}={}){
+//     this.newColor=newColor
+//   }
+// }
+
+// const d = new cha({newColor:'purple'})
+// d.colorChange('orange')
+// async function async1(){
+//   console.log('asy1-start');//2
+//   await async2()
+//   console.log('async-end');//7
+// }
+// async function async2(){
+//   console.log('async2');//3
+// }
+
+// console.log("script-s");//1
+// setTimeout(function(){
+//   console.log('setimeout0');//9
+// },0)
+// setTimeout(function(){
+//   console.log('setimeout3');//10
+// },3)
+// async1()
+// new Promise((resolve) => {
+//   console.log('promise1')//4
+//   resolve()
+//   console.log('promise2');//5
+// }).then(function(){
+//   console.log('promise3');//8
+// })
+// console.log("script-e");//6
+// function get(one,two,three){
+//   console.log(one);
+//   console.log(two);
+//   console.log(three);
+// }
+// const person = 'tom'
+// const age = 21
+// get`${person} is ${age} years old`
+function createIn(){
+  let count = 0 
+  function increment(){
+    count++
+    console.log(count);
+  }
+
+  let message = `Count is ${count}`
+  function log(){
+    console.log(message);
+    console.log(count);
+    console.log( `Count is ${count}`);
+  }
+
+  return[increment,log]
+
+}
+
+const [increment,log]=createIn()
+increment()
+increment()
+increment()
+log()
+
+
+let a = {}
+console.log(typeof a );
+</script>
+</html>
